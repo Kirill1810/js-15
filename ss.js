@@ -36,18 +36,38 @@
 
 //3
 
+// const users = [
+//     { id: "player-1", name: "Mango", points: 54, email: 123, friend: 4 },
+//     { id: "player-2", name: "Poly", points: 92, email: 13, friend: 0 },
+//     { id: "player-3", name: "Kiwi", points: 48, email: 143, friend: 3 },
+//     { id: "player-4", name: "Ajax", points: 71, email: 153, friend: 1 },
+//     { id: "player-5", name: "Chelsy", points: 48, email: 183, friend: 0 }
+// ];
+
+
+// const sortedUsers = users.sort((a, b) => a.friend - b.friend);
+
+
+// const namesSortedByFriends = sortedUsers.map(user => user.name);
+
+// console.log(namesSortedByFriends);
+
+//4
+
 const users = [
-    { id: "player-1", name: "Mango", points: 54, email: 123, friend: 4 },
-    { id: "player-2", name: "Poly", points: 92, email: 13, friend: 0 },
-    { id: "player-3", name: "Kiwi", points: 48, email: 143, friend: 3 },
-    { id: "player-4", name: "Ajax", points: 71, email: 153, friend: 1 },
-    { id: "player-5", name: "Chelsy", points: 48, email: 183, friend: 0 }
+    { id: "player-1", name: "Mango", points: 54, email: 123, skills:"js" },
+    { id: "player-2", name: "Poly", points: 92, email: 13, skills:"html" },
+    { id: "player-3", name: "Kiwi", points: 48, email: 143, skills:"css" },
+    { id: "player-4", name: "Ajax", points: 71, email: 153, skills:"scss" },
+
+
+
 ];
 
 
-const sortedUsers = users.sort((a, b) => a.friend - b.friend);
 
 
-const namesSortedByFriends = sortedUsers.map(user => user.name);
 
-console.log(namesSortedByFriends);
+const uniqueSkills = [...new Set(users.map(user => user.skills))].sort();
+
+console.log(uniqueSkills);
